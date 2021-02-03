@@ -143,7 +143,7 @@ def prescription():
     data = Objects.objects.all()
     for nums in data:
         if nums.nds == True:
-            print(nums.value)
+
             nds_val = float(nums.value) * (nums.nds_value / 100)
             text = f'{nums.value}({num2text(float(nums.value))}){rub(str(int(float(nums.value)))[-1])}{cop(nums.value)},' \
                    f' включая ндс ({nums.nds_value}%) в сумме {nds_val}.{(num2text(nds_val))} {rub(str(int(float(nds_val)))[-1])}' \
