@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %} Values {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Введите данные</h1>
+        <section class="col border py-2">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form obj layout='horizontal' %}
+                {% bootstrap_form_errors obj %}
+                {% buttons submit='Добавить' %} {% endbuttons %}
+            </form>
+        {% for i in res %}
+            <p class="text-center col border py-2">{{i}}</p>
+        {% endfor %}
+        </section>
+    </div>
+
+{% endblock %}
