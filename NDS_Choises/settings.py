@@ -25,7 +25,7 @@ SECRET_KEY = '6w4azv_5g41=gn5r9ufw-^edgzf@58wr6hny(+^f4gb5#qaa!%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME':'nds_choises',
         'USER':'postgres',
         'PASSWORD':'250768ak',
-        'HOST':'localhost',
+        'HOST':'db',
         'PORT':'5432'
     }
 }
